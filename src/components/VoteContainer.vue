@@ -15,7 +15,7 @@ export default {
       required: true,
     },
     currentValue: {
-      type: String,
+      type: Number,
       required: true,
     },
   },
@@ -31,8 +31,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/main.scss";
-
 .row > p {
   @include font($arial, $text-gray-300, 17px, 700);
   margin: -3px 10px 0 10px;
@@ -40,7 +38,7 @@ export default {
 
 .column > p {
   @include font($arial, $text-gray-300, 20px, 700);
-  margin: 18px 0 18px -5px;
+  margin: 18px 0 18px 0;
 }
 
 .arrow-up {
@@ -48,6 +46,9 @@ export default {
   height: 12.75px;
   background-color: $text-gray-300;
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  &:hover {
+    background-color: $primary-color;
+  }
 }
 
 .arrow-down {
@@ -55,5 +56,8 @@ export default {
   height: 12.75px;
   background-color: $text-gray-300;
   clip-path: polygon(100% 0, 0 0, 50% 100%);
+  &:hover {
+    background-color: $primary-color;
+  }
 }
 </style>
