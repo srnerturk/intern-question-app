@@ -21,7 +21,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/main.scss";
 .circular-img {
   object-fit: cover;
   border-radius: 50%;
