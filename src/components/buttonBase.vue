@@ -1,5 +1,5 @@
 <template>
-  <btnbase @click="click" class="btn" :class="[color, size]">
+  <btnbase @click="click" class="btn" :class="[color, size, fontfamily]">
     <slot />
   </btnbase>
 </template>
@@ -17,6 +17,9 @@ export default {
     size: {
       type: String,
     },
+    fontfamily: {
+      type: String,
+    },
   },
 };
 </script>
@@ -27,10 +30,9 @@ export default {
   padding: 4px 8px;
   border-radius: 2px;
   display: inline-block;
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: bold;
   transition-duration: 0.5s;
-  font-family: $arial;
 
   &.backwhite {
     background-color: $main-background;
@@ -50,6 +52,9 @@ export default {
   &.fontgrey {
     color: $text-gray-100;
   }
+  &.fontblue {
+    color: $blue;
+  }
 
   &.btn:hover {
     &.hoverbackblack {
@@ -61,12 +66,22 @@ export default {
     &.hoverbackred {
       background-color: $red-300;
     }
-    &.hoverfontkwhite {
+    &.hoverfontwhite {
       color: $main-background;
     }
   }
   &.medium {
     padding: 9px 12px;
+  }
+
+  &.arial {
+    font-family: $arial;
+  }
+  &.timeNew {
+    font-family: $timesNewRoman;
+  }
+  &.roboto {
+    font-family: roboto, Arial, sans-serif;
   }
 }
 </style>
