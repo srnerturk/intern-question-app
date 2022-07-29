@@ -39,17 +39,20 @@ ul {
   list-style-type: none;
 }
 .ask-box {
-  padding: 30px;
+  padding: 20px;
   display: flex;
   background-color: $main-background;
   border-bottom: solid 2px #e4e6e6;
+  border-top: solid 1px #e4e6e6;
+  border-right: solid 1px #e4e6e6;
+  border-left: solid 1px #e4e6e6;
   .avatar {
-    margin-right: 30px;
+    margin-right: 20px;
+    margin: auto;
     &-photo {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       border-radius: 100%;
-      overflow: hidden;
     }
   }
   .box-question {
