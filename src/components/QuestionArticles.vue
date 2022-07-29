@@ -118,6 +118,8 @@ ul {
 article {
   background-color: $main-background;
   border-bottom: solid 1px #e4e6e6;
+  border-left: solid 1px #e4e6e6;
+  border-right: solid 1px #e4e6e6;
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -142,7 +144,6 @@ article {
         height: 46px;
         border-radius: 100%;
         border: solid 2px $blue;
-        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -151,6 +152,9 @@ article {
           width: 84%;
           height: 84%;
           border-radius: 100%;
+        }
+        &:hover {
+          border: solid 2px $primary-color;
         }
       }
     }

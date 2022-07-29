@@ -41,6 +41,8 @@ ul {
   padding-right: 30px;
   background-color: $main-background;
   border-bottom: solid 2px #e4e6e6;
+  border-left: solid 1px #e4e6e6;
+  border-right: solid 1px #e4e6e6;
   .categories-menu {
     height: 100%;
     display: flex;
