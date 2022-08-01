@@ -31,13 +31,6 @@
   </div>
 </template>
 <style lang="scss" scoped>
-a {
-  text-decoration: none;
-  color: #000;
-}
-ul {
-  list-style-type: none;
-}
 .ask-box {
   padding: 20px;
   display: flex;

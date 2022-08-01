@@ -38,12 +38,14 @@ export default {
 
 .column > p {
   @include font($arial, $text-gray-300, 20px, 700);
-  margin: 18px 0 18px 0;
+  margin: auto;
 }
 
 .arrow-up {
+  margin: auto;
   width: 12.75px;
   height: 12.75px;
+  margin-bottom: 10px;
   background-color: $text-gray-300;
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
   &:hover {
@@ -52,8 +54,10 @@ export default {
 }
 
 .arrow-down {
+  margin: auto;
   width: 12.75px;
   height: 12.75px;
+  margin-top: 10px;
   background-color: $text-gray-300;
   clip-path: polygon(100% 0, 0 0, 50% 100%);
   &:hover {
