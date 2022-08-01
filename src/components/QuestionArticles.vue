@@ -3,8 +3,9 @@
     <div class="pinned">Pinned</div>
     <div class="user-vote">
       <div class="user">
-        <div class="img">
+        <div class="user-img">
           <img
+            class="user"
             src="https://2code.info/demo/themes/Discy/Try/wp-content/uploads/2018/04/team-2-42x42.jpg"
             alt=""
           />
@@ -31,10 +32,11 @@
         </ul>
       </div>
 
-      <a class="title" href="#"
+      <router-link class="title" :to="'/question'"
         >Is this statement, “i see him last night” can be understood as “I saw
-        him last night”?</a
+        him last night”?</router-link
       >
+
       <div class="description">
         In my local language (Bahasa Indonesia) there are no verb-2 or past
         tense form as time tracker. So, I often forget to use the past form of
@@ -139,18 +141,17 @@ article {
     flex-direction: column;
     margin-right: 20px;
     .user {
-      .img {
-        width: 46px;
-        height: 46px;
+      .user-img {
+        width: 45px;
+        height: 45px;
         border-radius: 100%;
         border: solid 2px $blue;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
-        img {
-          width: 84%;
-          height: 84%;
+        .user {
+          width: 35px;
+          height: 35px;
           border-radius: 100%;
         }
         &:hover {
@@ -159,13 +160,7 @@ article {
       }
     }
     .vote {
-      span {
-        display: block;
-        font-size: 20px;
-        font-weight: 700;
-        color: $text-gray-300;
-        margin: 10px 0;
-      }
+      margin: auto;
     }
   }
   .content {

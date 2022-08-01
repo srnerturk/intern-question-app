@@ -26,13 +26,6 @@
   </div>
 </template>
 <style lang="scss" scoped>
-a {
-  text-decoration: none;
-  color: #000;
-}
-ul {
-  list-style-type: none;
-}
 .categories {
   height: 80px;
   display: flex;
@@ -54,6 +47,9 @@ ul {
       align-items: center;
       margin-right: 20px;
       a {
+        text-decoration: none;
+        font-family: $arial;
+        font-size: 13px;
         display: flex;
         align-items: center;
         height: 100%;
