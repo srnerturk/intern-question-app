@@ -32,6 +32,8 @@
 </template>
 <style lang="scss" scoped>
 .ask-box {
+  max-width: 820px;
+  width: auto;
   padding: 20px;
   display: flex;
   background-color: $main-background;

@@ -21,6 +21,6 @@ export default {
 </script>
 <style lang="scss">
 .main {
-  max-width: 820px;
+  max-width: 1170px;
 }
 </style>

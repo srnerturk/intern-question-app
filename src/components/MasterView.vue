@@ -22,7 +22,7 @@ export default {
 <style lang="scss" scoped>
 .row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   .card {
     margin-right: 80px;
   }
