@@ -1,12 +1,22 @@
 <template>
-  <div>
+  <div v-bind:class="size == 'small' ? 'tooltip' : ''">
     <img class="circular-img" :class="size" :src="url" alt="user image" />
+    <div v-if="size == 'small'" class="tooltip-item">
+      <user-info-popup />
+    </div>
   </div>
 </template>
 
 <script>
+import UserInfoPopup from "./UserInfoPopup.vue";
 export default {
   name: "CircleUserAvatar",
+  components: {
+    UserInfoPopup,
+  },
+  data: () => ({
+    hover: false,
+  }),
   props: {
     url: {
       type: String,
@@ -16,6 +26,9 @@ export default {
       type: String,
       required: true,
     },
+  },
+  mounted() {
+    console.log(this.size);
   },
 };
 </script>
@@ -42,6 +55,16 @@ export default {
   }
   &:hover {
     border-color: $primary-color;
+  }
+}
+
+.tooltip {
+  position: relative;
+  .tooltip-item {
+    visibility: hidden;
+  }
+  &:hover .tooltip-item {
+    visibility: visible;
   }
 }
 </style>

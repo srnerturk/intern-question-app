@@ -67,9 +67,10 @@ export default {
 .answers-tabbar {
   background-color: $background-gray-100;
   width: 100%;
-  max-width: 819px;
+  max-width: 820px;
   justify-content: space-between;
   padding: 30px 30px 0;
+  border: 1px solid $background-gray-400;
   & .answer-num {
     @include font($roboto, $text-gray-700, 14px, 700);
   }
@@ -84,7 +85,7 @@ export default {
   & .chosen {
     background-color: $main-background !important;
     color: $text-gray-600 !important;
-    border-bottom: 0;
+    border-bottom: 1px solid $main-background;
     &:hover {
       color: $blue;
     }
