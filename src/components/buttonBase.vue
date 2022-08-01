@@ -66,6 +66,9 @@ export default {
     &.hoverbackred {
       background-color: $red-300;
     }
+    &.hoverbackgray {
+      background-color: $text-gray-300;
+    }
     &.hoverfontwhite {
       color: $main-background;
     }

@@ -118,6 +118,8 @@ ul {
   list-style-type: none;
 }
 article {
+  max-width: 820px;
+  width: auto;
   background-color: $main-background;
   border-bottom: solid 1px #e4e6e6;
   border-left: solid 1px #e4e6e6;
