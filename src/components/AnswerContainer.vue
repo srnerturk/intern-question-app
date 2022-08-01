@@ -31,6 +31,7 @@
             </div>
           </div>
           <svg
+            id="svg2"
             enable-background="new 0 0 12 12"
             height="12px"
             viewBox="0 0 12 12"
@@ -79,9 +80,12 @@ export default {
 .answer-container {
   @include flex(column, center, safe);
   background-color: $main-background;
-  width: 819px;
+  max-width: 820px;
+  width: 100%;
   padding: 30px;
   border-bottom: 2px solid $background-gray-300;
+  border-left: 1px solid $background-gray-400;
+  border-right: 1px solid $background-gray-400;
 }
 
 p {
@@ -132,6 +136,15 @@ svg circle {
   color: $blue;
   & #svg1 {
     fill: $blue;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bottom-row {
+    justify-content: left;
+  }
+  #svg2 {
+    margin-left: 16px;
   }
 }
 </style>
