@@ -2,10 +2,7 @@
   <div class="side-bar">
     <ul class="side-bar-list">
       <li class="side-bar-list-item">
-        <router-link
-          :to="{ name: 'QuestionView', query: { questionId: 5 } }"
-          class="side-bar-list-item-link"
-        >
+        <router-link :to="{ name: 'HomeView' }" class="side-bar-list-item-link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -25,7 +22,7 @@
         >
       </li>
       <li class="side-bar-list-item">
-        <a href="" class="side-bar-list-item-link">
+        <router-link :to="{ name: 'AddPost' }" class="side-bar-list-item-link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -46,11 +43,14 @@
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <polyline points="10 9 9 9 8 9"></polyline>
           </svg>
-          <p>Add Post</p></a
+          <p>Add Post</p></router-link
         >
       </li>
       <li class="side-bar-list-item">
-        <a href="" class="side-bar-list-item-link">
+        <router-link
+          :to="{ name: 'QuestionView' }"
+          class="side-bar-list-item-link"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -67,24 +67,32 @@
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
           </svg>
           <p>Questions</p>
-        </a>
+        </router-link>
         <ul class="sub-menu">
           <li class="sub-menu-item">
-            <a href="" class="sub-menu-item-text">New Question</a>
+            <router-link :to="{}" class="sub-menu-item-text"
+              >New Question</router-link
+            >
           </li>
           <li class="sub-menu-item">
-            <a href="" class="sub-menu-item-text">Trending Questions</a>
+            <router-link :to="{}" class="sub-menu-item-text"
+              >Trending Questions</router-link
+            >
           </li>
           <li class="sub-menu-item">
-            <a href="" class="sub-menu-item-text">Must read Questions</a>
+            <router-link :to="{}" class="sub-menu-item-text"
+              >Must read Questions</router-link
+            >
           </li>
           <li class="sub-menu-item">
-            <a href="" class="sub-menu-item-text">Hot Questions</a>
+            <router-link :to="{}" class="sub-menu-item-text"
+              >Hot Questions</router-link
+            >
           </li>
         </ul>
       </li>
       <li class="side-bar-list-item">
-        <a href="" class="side-bar-list-item-link">
+        <router-link :to="{ name: 'Users' }" class="side-bar-list-item-link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -103,7 +111,7 @@
             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
           </svg>
           <p>Users</p>
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>
