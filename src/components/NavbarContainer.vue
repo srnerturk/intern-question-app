@@ -200,7 +200,9 @@
                 </div>
                 <div class="modal-footer">
                   <h5>
-                    Don't have account,<button @click="isOpenUp = !isOpenUp">
+                    Don't have account,<button
+                      @click="(isOpenUp = !isOpenUp), (isOpenIn = false)"
+                    >
                       Sign Up Here
                     </button>
                   </h5>
@@ -360,7 +362,13 @@
                   </button>
                 </div>
                 <div class="modal-footer">
-                  <h5>Have an account?,<a href="">Sign In Now</a></h5>
+                  <h5>
+                    Have an account?,<button
+                      @click="(isOpenIn = !isOpenIn), (isOpenUp = false)"
+                    >
+                      Sign In
+                    </button>
+                  </h5>
                 </div>
               </div>
             </div>
@@ -554,6 +562,31 @@ a {
     width: 100%;
     padding-left: 30px;
   }
+  svg {
+    position: relative;
+    top: -36px;
+    left: 6px;
+  }
+  .password {
+    margin-top: -25px;
+  }
+  input {
+    margin-top: -14px;
+    padding: 11px 11px 11px 30px;
+    border: 1px solid $background-gray-400;
+    &:focus {
+      outline: none;
+    }
+  }
+  .remember {
+    margin-top: -25px;
+    a {
+      color: $text-gray-700;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
 }
 .modal-footer {
   margin-top: 5px;
@@ -589,32 +622,6 @@ label {
     cursor: pointer;
   }
 }
-.modal-body input {
-  margin-top: -14px;
-  padding: 11px 11px 11px 30px;
-  border: 1px solid $background-gray-400;
-  &:focus {
-    outline: none;
-  }
-}
-.modal-body svg {
-  position: relative;
-  top: -36px;
-  left: 2px;
-}
-
-.password {
-  margin-top: -25px;
-}
-.remember {
-  margin-top: -25px;
-  a {
-    color: $text-gray-700;
-  }
-}
-.remember a:hover {
-  color: $blue;
-}
 .clearfix::after {
   content: "";
   clear: both;
@@ -639,20 +646,14 @@ label {
     background-color: $text-gray-100;
   }
 }
-.modal-footer a {
-  color: blue;
-  &:hover {
-    color: $main-background;
-  }
-}
 .sign-check {
   line-height: 16px;
   margin-top: -15px;
-}
-.sign-check a {
-  color: $text-gray-700;
-  &:hover {
-    color: $blue;
+  a {
+    color: $text-gray-700;
+    &:hover {
+      color: $blue;
+    }
   }
 }
 </style>
