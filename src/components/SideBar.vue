@@ -119,16 +119,12 @@ export default {
   font-size: 14px;
   font-weight: 700;
   font-family: $roboto;
-  padding-inline-start: 40px;
-
+  padding-inline-start: 95px;
   &-list {
-    //ul
     padding-top: 50px;
     display: block;
     list-style: none;
-
     &-item {
-      //li
       list-style: none;
       margin-bottom: 20px;
       overflow: hidden;
@@ -137,13 +133,12 @@ export default {
         &:hover {
           color: blue;
         }
-        //a
+        align-items: center;
         text-decoration: none;
         color: $text-gray-600;
         display: flex;
         transition: color 0.15s ease-in;
         &-icon {
-          //svg
           margin-right: 10px;
           font-size: 20px;
           font-weight: 400;
@@ -157,22 +152,14 @@ export default {
   }
 }
 .sub-menu {
-  //ul
-
   margin: 10px 0;
-
   padding: 0 0 0 33px;
   clear: both;
-
   &-item {
-    //li
-
     margin-bottom: 8px;
     list-style: none;
     overflow: hidden;
-
     &-text {
-      //a
       &:hover {
         color: blue;
       }
