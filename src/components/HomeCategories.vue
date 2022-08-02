@@ -27,7 +27,6 @@
 </template>
 <style lang="scss" scoped>
 .categories {
-  max-width: 820px;
   width: auto;
   height: 80px;
   display: flex;

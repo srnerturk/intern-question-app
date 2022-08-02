@@ -1,11 +1,17 @@
 <template>
   <div id="app">
-    <router-view />
+    <main-layout>
+      <router-view />
+    </main-layout>
   </div>
 </template>
 <script>
+import MainLayout from "./layouts/MainLayout.vue";
 export default {
   name: "App",
+  components: {
+    MainLayout,
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -13,5 +19,9 @@ export default {
 @import "./assets/scss/main.scss";
 #app {
   background-color: $background-gray-200;
+}
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
 }
 </style>

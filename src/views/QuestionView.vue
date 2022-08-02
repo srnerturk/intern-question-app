@@ -1,32 +1,29 @@
 <template>
   <div>
-    <master-view>
-      <div class="column main">
-        <question-articles />
-        <div class="answer-btn-container">
-          <button-base
-            class="answer-btn"
-            :color="['backblue', 'fontwhite', 'hoverbackgray']"
-            :fontfamily="'roboto'"
-            @click="addAnswer"
-          >
-            Leave an Answer
-          </button-base>
-        </div>
-        <answer-list-container :answers="data" />
+    <div class="column main">
+      <question-articles />
+      <div class="answer-btn-container">
+        <button-base
+          class="answer-btn"
+          :color="['backblue', 'fontwhite', 'hoverbackgray']"
+          :fontfamily="'roboto'"
+          @click="addAnswer"
+        >
+          Leave an Answer
+        </button-base>
       </div>
-    </master-view>
+      <answer-list-container :answers="data" />
+    </div>
   </div>
 </template>
 
 <script>
-import MasterView from "@/components/MasterView.vue";
 import QuestionArticles from "@/components/QuestionArticles.vue";
 import AnswerListContainer from "../components/AnswerListContainer.vue";
 import ButtonBase from "@/components/buttonBase.vue";
 export default {
   name: "QuestionView",
-  components: { MasterView, QuestionArticles, AnswerListContainer, ButtonBase },
+  components: { QuestionArticles, AnswerListContainer, ButtonBase },
   data: () => ({
     data: [
       {

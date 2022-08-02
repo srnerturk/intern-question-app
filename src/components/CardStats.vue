@@ -55,32 +55,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-body {
-  background: white;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
 .stats-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 250px;
+  padding: 20px 10px;
 }
 
 .statistics {
-  width: 267px;
+  width: 100%;
   height: 224px;
   background: whitesmoke;
-  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

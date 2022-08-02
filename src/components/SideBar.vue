@@ -2,7 +2,10 @@
   <div class="side-bar">
     <ul class="side-bar-list">
       <li class="side-bar-list-item">
-        <a href="" class="side-bar-list-item-link">
+        <router-link
+          :to="{ name: 'QuestionView', query: { questionId: 5 } }"
+          class="side-bar-list-item-link"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -18,7 +21,7 @@
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
           </svg>
-          <p>Home</p></a
+          <p>Home</p></router-link
         >
       </li>
       <li class="side-bar-list-item">
@@ -113,13 +116,12 @@ export default {
 <style lang="scss" scoped>
 .side-bar {
   background-color: $background-gray-200;
-  height: 800px;
-  width: 320px;
+  width: 220px;
   line-height: 22px;
   font-size: 14px;
   font-weight: 700;
   font-family: $roboto;
-  padding-inline-start: 95px;
+  height: 100vh;
   &-list {
     padding-top: 50px;
     display: block;
@@ -128,7 +130,6 @@ export default {
       list-style: none;
       margin-bottom: 20px;
       overflow: hidden;
-      margin-left: 60px;
       &-link {
         &:hover {
           color: blue;

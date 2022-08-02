@@ -1,26 +1,22 @@
 <template>
   <div>
-    <master-view>
-      <div class="column main">
-        <ask-box />
-        <home-categories />
-        <question-articles />
-      </div>
-    </master-view>
+    <div class="home-view">
+      <ask-box />
+      <home-categories />
+      <question-articles />
+    </div>
   </div>
 </template>
 <script>
-import MasterView from "@/components/MasterView.vue";
 import AskBox from "@/components/AskBox.vue";
 import HomeCategories from "@/components/HomeCategories.vue";
 import QuestionArticles from "@/components/QuestionArticles.vue";
 export default {
-  components: { MasterView, AskBox, HomeCategories, QuestionArticles },
   name: "HomeView",
+  components: {
+    AskBox,
+    HomeCategories,
+    QuestionArticles,
+  },
 };
 </script>
-<style lang="scss">
-.main {
-  max-width: 1170px;
-}
-</style>
